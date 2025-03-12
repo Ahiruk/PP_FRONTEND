@@ -128,3 +128,23 @@ body.dark-mode .nav-links a.active {
 .dark-mode .work-meta {
     color: #bbb;
 }
+
+@media (max-width: 600px) {
+    .work-container {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .work-item {
+      display: block;        
+    }
+    .work-item img {
+        width: 100%;        
+        margin: 0 0 15px 0; 
+      }
+      .work-details {
+        text-align: left;
+      }
+
+  }
+  
