@@ -190,3 +190,22 @@ body.dark-mode .nav-links a.active {
 }
 
 
+
+/* Sección del dark mode */
+.dark-mode .ministro-card {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.dark-mode .ministro-info h2 {
+    color: #fff;
+}
+
+.dark-mode .ministro-info h3 {
+    color: #bbb;
+}
+
+.dark-mode .ministro-info p {
+    color: #999;
+}
+
