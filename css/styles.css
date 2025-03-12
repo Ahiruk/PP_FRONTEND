@@ -1,6 +1,6 @@
     * {
         margin: 0;
-        padding: 0;
+        padding: 1px;
         box-sizing: border-box;
     }
 
@@ -76,13 +76,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px;
+        padding: 30px;
         flex-wrap: wrap;
         text-align: center;
     }
 
     .hero-content {
         max-width: 50%;
+        padding: 10px;
     }
 
     .hero-image img {
