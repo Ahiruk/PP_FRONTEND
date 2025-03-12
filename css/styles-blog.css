@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -121,6 +120,7 @@ body.dark-mode .nav-links a.active {
 .dark-mode .work-meta {
     color: #bbb;
 }
+
 /* Estilos base para la sección de ministros */
 .ministros-container {
     display: flex;
@@ -146,8 +146,8 @@ body.dark-mode .nav-links a.active {
 }
 
 .ministro-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Efecto más sutil */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más suave */
 }
 
 .ministro-imagen {
@@ -197,25 +197,6 @@ body.dark-mode .nav-links a.active {
     line-height: 1.6;
     margin-top: 10px;
 }
-/* efecto de borde animado */
-.ministro-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    background: linear-gradient(45deg, #ff6b6b, #3a7bd5);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.ministro-card:hover::before {
-    opacity: 0; /* Cambia a 0 para eliminar el efecto */
-}
 
 /* Modo oscuro para la sección de ministros */
 .dark-mode .ministro-card {
@@ -237,10 +218,6 @@ body.dark-mode .nav-links a.active {
 
 .dark-mode .ministro-info p {
     color: #999;
-}
-
-.dark-mode .ministro-card::before {
-    background: linear-gradient(45deg, #ff6b6b, #3a7bd5);
 }
 
 /* Media Queries para Responsividad */
@@ -286,17 +263,4 @@ body.dark-mode .nav-links a.active {
     .ministro-info p {
         font-size: 12px;
     }
-}
-
-/* 
-link de ministros */
-.ministro-link {
-    text-decoration: none;
-    color: inherit;
-    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
-}
-
-.ministro-card:hover {
-    transform: translateY(-5px); /* Efecto más sutil */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más suave */
 }
