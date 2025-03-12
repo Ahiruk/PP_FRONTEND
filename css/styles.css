@@ -18,7 +18,6 @@ body.dark-mode .post {
     color: #fff;
 }
 
-/* === HEADER === */
 header {
     display: flex;
     justify-content: space-between;
