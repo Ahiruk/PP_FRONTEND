@@ -165,3 +165,28 @@ body.dark-mode .nav-links a.active {
 }
 
 
+.ministro-info {
+    padding: 20px;
+}
+
+.ministro-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.ministro-info h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.ministro-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
