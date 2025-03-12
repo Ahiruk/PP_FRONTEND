@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works</title>
-    <link rel="stylesheet" href="/css/styles-work.css">
+    <title>Detalle de la Noticia</title>
+    <link rel="stylesheet" href="/css/styles-workdet.css">
 </head>
 <body>
 
@@ -12,54 +12,27 @@
         <nav>
             <div class="nav-links">
                 <a href="/index.html">Inicio</a>
-                <a href="work.html" class="active">Work</a>
                 <a href="/pages/blog.html">Blog</a>
-                
-                <a href="/pages/work_detail.html">Contact</a>
+                <a href="/pages/work.html">Noticias</a>
+                <a href="/pages/work_detail.html" class="active">Contact</a>
             </div>
-            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+            <button id="dark-mode-toggle">🌙 Modo Oscuro</button>
         </nav>
     </header>
 
-    <main class="work-container">
-        <h1>Noticias</h1>
+    <main class="work-detail-container">
+        <h1>Petro impulsa la transición energética en Colombia</h1>
+        <p class="work-meta"><span class="year">2025</span> Economía y Política</p>
+        <p>El presidente Gustavo Petro ha anunciado una serie de reformas destinadas a acelerar la transición de Colombia hacia energías renovables, destacando la importancia de reducir la dependencia de combustibles fósiles y promover un desarrollo sostenible en el país.</p>
 
-        <section class="work-item">
-            <img src="/Img/1.png" alt="Petro en reforma energética">
-            <div class="work-details">
-                <h2>Petro impulsa la transición energética en Colombia</h2>
-                <p class="work-meta"><span class="year">2025</span> Economía y Política</p>
-                <p>El presidente Petro anuncia una reforma para impulsar la transición hacia energías renovables, marcando un hito en la política ambiental del país.</p>
-            </div>
-        </section>
+        <img src="/Img/1.png" alt="Gustavo Petro en conferencia sobre transición energética">
 
-        <section class="work-item">
-            <img src="/Img/2.jpg" alt="Petro y nueva legislación">
-            <div class="work-details">
-                <h2>Petro promulga nueva legislación para el sector energético</h2>
-                <p class="work-meta"><span class="year">2025</span> Legislación</p>
-                <p>El gobierno liderado por Petro presenta reformas legislativas enfocadas en la sostenibilidad y modernización del sector energético.</p>
-            </div>
-        </section>
+        <h2>Compromisos internacionales y políticas nacionales</h2>
+        <h3>Participación en cumbres climáticas</h3>
+        <p>En noviembre de 2022, Petro asistió a la COP27 en Egipto, donde abogó por la protección del Amazonas y propuso la creación de un fondo común con países como Brasil, Perú, Venezuela y Estados Unidos para su conservación. Además, anunció que Colombia destinará 140 millones de dólares anuales durante los próximos 20 años para este fin. :contentReference[oaicite:0]{index=0}</p>
 
-        <section class="work-item">
-            <img src="/Img/3.jpg" alt="Petro y política social">
-            <div class="work-details">
-                <h2>Impacto social de las políticas de Petro</h2>
-                <p class="work-meta"><span class="year">2025</span> Políticas Públicas</p>
-                <p>Las nuevas medidas implementadas generan un amplio debate sobre el impacto social y la equidad en el acceso a servicios públicos.</p>
-            </div>
-        </section>
-
-        <section class="work-item">
-            <img src="/Img/4.jpg" alt="Petro en relaciones internacionales">
-            <div class="work-details">
-                <h2>Petro refuerza las relaciones internacionales</h2>
-                <p class="work-meta"><span class="year">2025</span> Relaciones Internacionales</p>
-                <p>El presidente Petro viaja al exterior para consolidar alianzas estratégicas en materia energética y fomentar la cooperación global.</p>
-            </div>
-        </section>
-
+        <h3>Reformas energéticas y económicas</h3>
+        <p>El gobierno ha detenido la aprobación de nuevos contratos de exploración petrolera y ha limitado las operaciones de la empresa estatal Ecopetrol en fracking, buscando redirigir recursos hacia proyectos de energías limpias.</p>
     </main>
 
     <footer>
@@ -69,7 +42,7 @@
             <a href="https://www.instagram.com" target="_blank"><img src="/Img/Instagram.png" alt="Instagram"></a>
             <a href="https://github.com" target="_blank"><img src="/Img/github.png" alt="Github"></a>
         </div>
-        <p>Copyright ©2025 All rights reserved</p>
+        <p>Copyright ©2025 Todos los derechos reservados</p>
     </footer>
 
     <script>
@@ -77,10 +50,10 @@
             const darkModeToggle = document.getElementById("dark-mode-toggle");
             const body = document.body;
 
-            // Comprobar si el usuario ya activó el modo oscuro
+            // Verificar si el usuario tiene activado el modo oscuro
             if (localStorage.getItem("darkMode") === "enabled") {
                 body.classList.add("dark-mode");
-                darkModeToggle.textContent = "☀️ Light Mode";
+                darkModeToggle.textContent = "☀️ Modo Claro";
             }
 
             darkModeToggle.addEventListener("click", function () {
@@ -88,10 +61,10 @@
 
                 if (body.classList.contains("dark-mode")) {
                     localStorage.setItem("darkMode", "enabled");
-                    darkModeToggle.textContent = "☀️ Light Mode";
+                    darkModeToggle.textContent = "☀️ Modo Claro";
                 } else {
                     localStorage.setItem("darkMode", "disabled");
-                    darkModeToggle.textContent = "🌙 Dark Mode";
+                    darkModeToggle.textContent = "🌙 Modo Oscuro";
                 }
             });
         });
