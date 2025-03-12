@@ -22,8 +22,8 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Hi, I am John, <br> <span>Creative Technologist</span></h1>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <h1>Gustavo Petro<br></h1>
+            <p>El presidente de Colombia, Gustavo Petro, ha impulsado reformas sociales y económicas con el objetivo de reducir la desigualdad y fortalecer la paz en el país. Su gobierno ha puesto énfasis en la transición energética, la educación gratuita y el acceso universal a la salud.</p>
             <button id="download-btn">Download Resume</button>
             <p id="download-message" style="display: none; color: green;">Descargando...</p>
         </div>
@@ -31,52 +31,52 @@
             <img src="Img/Petro.png" alt="Profile Picture">
         </div>
     </section>
-
+    
     <section class="recent-posts">
         <h2>Recent posts <span><a href="#">View all</a></span></h2>
         <div class="posts-container">
             <div class="post">
-                <h3>Making a design system from scratch</h3>
-                <p><small>12 Feb 2020 | Design, Pattern</small></p>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h3>Reforma a la salud en Colombia</h3>
+                <p><small>10 Mar 2025 | Política, Reforma</small></p>
+                <p>El gobierno de Gustavo Petro ha propuesto una reforma a la salud que busca garantizar el acceso universal, priorizando la atención primaria y descentralizando el sistema.</p>
             </div>
             <div class="post">
-                <h3>Creating pixel perfect icons in Figma</h3>
-                <p><small>12 Feb 2020 | Figma, Icon Design</small></p>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h3>Nueva legislación ambiental en Colombia</h3>
+                <p><small>02 Mar 2025 | Medioambiente, Energía</small></p>
+                <p>Colombia avanza en su transición energética con la aprobación de una ley que fomenta el uso de energías renovables y la reducción de la dependencia del petróleo.</p>
             </div>
         </div>
     </section>
-
+    
     <section class="featured-works">
         <h2>Featured works</h2>
         <div class="work-item">
-            <img src="Img/Botas.png" alt="Designing Dashboards">
+            <img src="Img/PetroSocial.webp" alt="Política Social">
             <div class="work-content">
-                <h3>Designing Dashboards</h3>
-                <span class="badge">2020</span> <span>Dashboard</span>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h3>Avances en política social</h3>
+                <span class="badge">2025</span> <span>Bienestar</span>
+                <p>El gobierno ha impulsado programas de educación gratuita y subsidios para familias en situación de vulnerabilidad, buscando mejorar la calidad de vida de millones de colombianos.</p>
             </div>
         </div>
-
+    
         <div class="work-item">
-            <img src="Img/Botas.png" alt="Vibrant Portraits">
+            <img src="Img/PetroColombia.webp" alt="Relaciones Internacionales">
             <div class="work-content">
-                <h3>Vibrant Portraits of 2020</h3>
-                <span class="badge">2018</span> <span>Illustration</span>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h3>Colombia y su papel en América Latina</h3>
+                <span class="badge">2025</span> <span>Diplomacia</span>
+                <p>El presidente Petro ha reforzado relaciones con Venezuela, Brasil y México, promoviendo una integración regional basada en cooperación económica y social.</p>
             </div>
         </div>
-
+    
         <div class="work-item">
-            <img src="Img/Botas.png" alt="Malayalam Typography">
+            <img src="Img/PetroPaz.webp" alt="Acuerdos de Paz">
             <div class="work-content">
-                <h3>36 Days of Malayalam type</h3>
-                <span class="badge">2018</span> <span>Typography</span>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                <h3>Diálogos de paz con grupos armados</h3>
+                <span class="badge">2025</span> <span>Seguridad</span>
+                <p>El gobierno ha retomado negociaciones con el ELN y otras organizaciones armadas, buscando una solución pacífica y estable al conflicto interno del país.</p>
             </div>
         </div>
-    </section>
+    </section>    
 
     <footer>
         <div class="social-icons">
@@ -101,16 +101,18 @@
         document.addEventListener("DOMContentLoaded", function () {
             const darkModeToggle = document.getElementById("dark-mode-toggle");
             const body = document.body;
-
+            const downloadBtn = document.getElementById("download-btn");
+            const downloadMessage = document.getElementById("download-message");
+        
             
             if (localStorage.getItem("darkMode") === "enabled") {
                 body.classList.add("dark-mode");
                 darkModeToggle.textContent = "☀️ Light Mode";
             }
-
+        
             darkModeToggle.addEventListener("click", function () {
                 body.classList.toggle("dark-mode");
-
+        
                 if (body.classList.contains("dark-mode")) {
                     localStorage.setItem("darkMode", "enabled");
                     darkModeToggle.textContent = "☀️ Light Mode";
@@ -118,6 +120,14 @@
                     localStorage.setItem("darkMode", "disabled");
                     darkModeToggle.textContent = "🌙 Dark Mode";
                 }
+            });
+        
+            downloadBtn.addEventListener("click", function () {
+                downloadMessage.style.display = "block"; 
+        
+                setTimeout(() => {
+                    downloadMessage.style.display = "none"; 
+                }, 3000);
             });
         });
     </script>
