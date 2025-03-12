@@ -130,3 +130,15 @@ body.dark-mode .nav-links a.active {
     padding: 40px 0;
     justify-content: center;
 }
+
+.ministro-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
