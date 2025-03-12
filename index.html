@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#">Works</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I am John, <br> <span>Creative Technologist</span></h1>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button>Download Resume</button>
+        </div>
+        <div class="hero-image">
+            <img src="Img/Petro.png" alt="Profile Picture">
+        </div>
+    </section>
+
+    <section class="recent-posts">
+        <h2>Recent posts <span><a href="#">View all</a></span></h2>
+        <div class="posts-container">
+            <div class="post">
+                <h3>Making a design system from scratch</h3>
+                <p><small>12 Feb 2020 | Design, Pattern</small></p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+            <div class="post">
+                <h3>Creating pixel perfect icons in Figma</h3>
+                <p><small>12 Feb 2020 | Figma, Icon Design</small></p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-works">
+        <h2>Featured works</h2>
+        <div class="work-item">
+            <img src="Img/Botas.png" alt="Designing Dashboards">
+            <div class="work-content">
+                <h3>Designing Dashboards</h3>
+                <span class="badge">2020</span> <span>Dashboard</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="Img/Botas.png" alt="Vibrant Portraits">
+            <div class="work-content">
+                <h3>Vibrant Portraits of 2020</h3>
+                <span class="badge">2018</span> <span>Illustration</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="Img/Botas.png" alt="Malayalam Typography">
+            <div class="work-content">
+                <h3>36 Days of Malayalam type</h3>
+                <span class="badge">2018</span> <span>Typography</span>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="Img/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="Img/Instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="Img/github.png" alt="Github">
+            </a>
+        </div>
+        <p>Copyright ©2025 All rights reserved</p>
+    </footer>
+    
+
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+
+</body>
+</html>
