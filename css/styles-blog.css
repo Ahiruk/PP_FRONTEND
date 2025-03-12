@@ -1,14 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
 }
 
 header {
@@ -18,18 +14,13 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
-}   
+}
 
 nav {
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .nav-links a {
@@ -39,79 +30,8 @@ nav {
     font-weight: bold;
 }
 
-.nav-links a.active {
+.nav-links .active {
     color: red;
-}
-
-.dark-mode-container {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-}
-
-#dark-mode-toggle {
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.blog-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.blog-container h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.blog-post {
-    background: #f0f0f0;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.post-meta {
-    font-size: 0.9rem;
-    color: gray;
-}
-
-.category {
-    font-weight: bold;
-    color: blue;
-}
-
-footer {
-    background: #f8f8f8;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
 }
 
 #dark-mode-toggle {
@@ -124,28 +44,259 @@ footer {
     font-weight: bold;
 }
 
-.dark-mode header {
-    background: #1e1e1e;
+.work-detail-container {
+    width: 60%;
+    margin: auto;
+    padding: 40px 0;
 }
 
-.dark-mode .nav-links a {
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.work-meta {
+    font-size: 14px;
+    color: gray;
+}
+
+.year {
+    background: black;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.work-detail-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+    margin-top: 30px;
+}
+
+body.dark-mode .social-icons img {
+    filter: brightness(0) invert(1);
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #333;
+}
+
+body.dark-mode .nav-links a {
     color: white;
 }
 
-.dark-mode .nav-links a.active {
+body.dark-mode .nav-links a.active {
     color: red;
 }
 
-.dark-mode .blog-post {
-    background: #333;
-    color: white;
+.dark-mode .work-meta {
+    color: #bbb;
+}
+/* Estilos base para la sección de ministros */
+.ministros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px; /* Añadido padding lateral para móviles */
+    justify-content: center;
+}
+
+.ministro-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Ancho completo por defecto */
+    max-width: 600px; /* Máximo ancho para escritorio */
+    display: flex;
+    flex-direction: column; /* Cambia a columna en móviles */
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.ministro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ministro-imagen {
+    width: 100%; /* Ancho completo en móviles */
+    height: 200px; /* Altura fija para la imagen */
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.ministro-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ministro-card:hover .ministro-imagen img {
+    transform: scale(1.1);
+}
+
+.ministro-info {
+    padding: 20px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Centrar texto en móviles */
+}
+
+.ministro-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.ministro-info h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.ministro-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+/* efecto de borde animado */
+.ministro-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #ff6b6b, #3a7bd5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ministro-card:hover::before {
+    opacity: 0; /* Cambia a 0 para eliminar el efecto */
+}
+
+/* Modo oscuro para la sección de ministros */
+.dark-mode .ministro-card {
+    background-color: #333;
     border: 1px solid #444;
 }
 
-.dark-mode footer {
-    background: #1e1e1e;
+.dark-mode .ministro-info {
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.9), rgba(51, 51, 51, 0.8));
 }
 
-.dark-mode .social-icons img {
-    filter: brightness(0.8);
+.dark-mode .ministro-info h2 {
+    color: #fff;
+}
+
+.dark-mode .ministro-info h3 {
+    color: #bbb;
+}
+
+.dark-mode .ministro-info p {
+    color: #999;
+}
+
+.dark-mode .ministro-card::before {
+    background: linear-gradient(45deg, #ff6b6b, #3a7bd5);
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablet: Diseño semi-alargado */
+@media (min-width: 768px) {
+    .ministro-card {
+        flex-direction: row; /* Cambia a fila en tablet y escritorio */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    .ministro-imagen {
+        width: 200px; /* Ancho fijo para la imagen */
+        height: 100%; /* Altura completa */
+    }
+
+    .ministro-info {
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+}
+
+/* Escritorio: Diseño completamente alargado */
+@media (min-width: 1024px) {
+    .ministro-card {
+        max-width: 800px; /* Más ancho en escritorio */
+    }
+
+    .ministro-imagen {
+        width: 250px; /* Imagen más grande en escritorio */
+    }
+}
+
+/* Móviles pequeños: Ajustes adicionales */
+@media (max-width: 480px) {
+    .ministro-info h2 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+    }
+
+    .ministro-info h3 {
+        font-size: 16px;
+    }
+
+    .ministro-info p {
+        font-size: 12px;
+    }
+}
+
+/* 
+link de ministros */
+.ministro-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+.ministro-card:hover {
+    transform: translateY(-5px); /* Efecto más sutil */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más suave */
 }
