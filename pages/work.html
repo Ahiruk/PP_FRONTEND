@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="/PP_FRONTEND/css/styles-work.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="/PP_FRONTEND/index.html">Inicio</a>
+                <a href="/PP_FRONTEND/pages/blog.html">Blog</a>
+                <a href="work.html" class="active">Noticias</a>
+                <a href="/PP_FRONTEND/pages/work_detail.html">Contact</a>
+            </div>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="work-container">
+        <h1>Noticias</h1>
+
+        <section class="work-item">
+            <img src="/PP_FRONTEND/Img/dashboard.png" alt="Dashboard">
+            <div class="work-details">
+                <h2>Designing Dashboards</h2>
+                <p class="work-meta"><span class="year">2020</span> Dashboard</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </section>
+
+        <section class="work-item">
+            <img src="/PP_FRONTEND/Img/portrait.png" alt="Vibrant Portraits">
+            <div class="work-details">
+                <h2>Vibrant Portraits of 2020</h2>
+                <p class="work-meta"><span class="year">2018</span> Illustration</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </section>
+
+        <section class="work-item">
+            <img src="/PP_FRONTEND/Img/malayalam.png" alt="Malayalam Typography">
+            <div class="work-details">
+                <h2>36 Days of Malayalam type</h2>
+                <p class="work-meta"><span class="year">2018</span> Typography</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </section>
+
+        <section class="work-item">
+            <img src="/PP_FRONTEND/Img/components.png" alt="Components">
+            <div class="work-details">
+                <h2>Components</h2>
+                <p class="work-meta"><span class="year">2018</span> Components, Design</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="/PP_FRONTEND/Img/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/PP_FRONTEND/Img/twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="/PP_FRONTEND/Img/Instagram.png" alt="Instagram"></a>
+            <a href="https://github.com" target="_blank"><img src="/PP_FRONTEND/Img/github.png" alt="Github"></a>
+        </div>
+        <p>Copyright ©2025 All rights reserved</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            const body = document.body;
+
+            // Comprobar si el usuario ya activó el modo oscuro
+            if (localStorage.getItem("darkMode") === "enabled") {
+                body.classList.add("dark-mode");
+                darkModeToggle.textContent = "☀️ Light Mode";
+            }
+
+            darkModeToggle.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+
+                if (body.classList.contains("dark-mode")) {
+                    localStorage.setItem("darkMode", "enabled");
+                    darkModeToggle.textContent = "☀️ Light Mode";
+                } else {
+                    localStorage.setItem("darkMode", "disabled");
+                    darkModeToggle.textContent = "🌙 Dark Mode";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
