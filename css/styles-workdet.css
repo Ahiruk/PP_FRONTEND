@@ -90,9 +90,13 @@ footer {
     margin-top: 30px;
 }
 
-.social-icons a img {
-    width: 25px;
-    margin: 0 5px;
+body.dark-mode .social-icons img {
+    filter: brightness(0) invert(1);
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
 }
 
 /* Modo oscuro */
